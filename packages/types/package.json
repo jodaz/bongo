@@ -1,0 +1,9 @@
+{
+  "name": "@packages/types",
+  "version": "1.0.0",
+  "description": "Shared types",
+  "private": true,
+  "dependencies": {
+    "@packages/types": "workspace:^"
+  }
+}

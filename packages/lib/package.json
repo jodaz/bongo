@@ -1,0 +1,9 @@
+{
+    "name": "@packages/lib",
+    "version": "1.0.0",
+    "description": "Shared lib",
+    "private": true,
+    "dependencies": {
+        "@packages/lib": "workspace:^"
+    }
+}

@@ -10,6 +10,18 @@ importers:
 
   apps/mobile:
     dependencies:
+      '@packages/lib':
+        specifier: workspace:^
+        version: link:../../packages/lib
+      '@packages/services':
+        specifier: workspace:^
+        version: link:../../packages/services
+      '@packages/types':
+        specifier: workspace:^
+        version: link:../../packages/types
+      '@react-native-async-storage/async-storage':
+        specifier: ^1.23.1
+        version: 1.23.1(react-native@0.73.6)
       axios:
         specifier: ^1.6.8
         version: 1.6.8
@@ -44,6 +56,12 @@ importers:
 
   apps/server:
     dependencies:
+      '@packages/lib':
+        specifier: workspace:^
+        version: link:../../packages/lib
+      '@packages/types':
+        specifier: workspace:^
+        version: link:../../packages/types
       express:
         specifier: ^4.19.2
         version: 4.19.2
@@ -63,6 +81,15 @@ importers:
 
   apps/web:
     dependencies:
+      '@packages/lib':
+        specifier: workspace:^
+        version: link:../../packages/lib
+      '@packages/services':
+        specifier: workspace:^
+        version: link:../../packages/services
+      '@packages/types':
+        specifier: workspace:^
+        version: link:../../packages/types
       next:
         specifier: ^14.2.3
         version: 14.2.3(react-dom@18.2.0)(react@18.2.0)
@@ -72,6 +99,24 @@ importers:
       react-dom:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
+
+  packages/lib:
+    dependencies:
+      '@packages/lib':
+        specifier: workspace:^
+        version: 'link:'
+
+  packages/services:
+    dependencies:
+      '@packages/services':
+        specifier: workspace:^
+        version: 'link:'
+
+  packages/types:
+    dependencies:
+      '@packages/types':
+        specifier: workspace:^
+        version: 'link:'
 
 packages:
 
@@ -2188,6 +2233,15 @@ packages:
     dependencies:
       mkdirp: 1.0.4
       rimraf: 3.0.2
+    dev: false
+
+  /@react-native-async-storage/async-storage@1.23.1(react-native@0.73.6):
+    resolution: {integrity: sha512-Qd2kQ3yi6Y3+AcUlrHxSLlnBvpdCEMVGFlVBneVOjaFaPU61g1huc38g339ysXspwY1QZA2aNhrk/KlHGO+ewA==}
+    peerDependencies:
+      react-native: ^0.0.0-0 || >=0.60 <1.0
+    dependencies:
+      merge-options: 3.0.4
+      react-native: 0.73.6(@babel/core@7.24.4)(@babel/preset-env@7.24.4)(react@18.2.0)
     dev: false
 
   /@react-native-community/cli-clean@12.3.6:
@@ -5084,6 +5138,11 @@ packages:
     engines: {node: '>=8'}
     dev: false
 
+  /is-plain-obj@2.1.0:
+    resolution: {integrity: sha512-YWnfyRwxL/+SsrWYfOpUtz5b3YD+nyfkHvjbcanzk8zgyO4ASD67uVMRt8k5bM4lLMDnXfriRhOpemw+NfT1eA==}
+    engines: {node: '>=8'}
+    dev: false
+
   /is-plain-object@2.0.4:
     resolution: {integrity: sha512-h5PpgXkWitc38BBMYawTYMWJHFZJVnBquFE57xFpjB8pJFiF6gZ+bU+WyI/yqXiFR5mdLsgYNaPe8uao6Uv9Og==}
     engines: {node: '>=0.10.0'}
@@ -5654,6 +5713,13 @@ packages:
 
   /merge-descriptors@1.0.1:
     resolution: {integrity: sha512-cCi6g3/Zr1iqQi6ySbseM1Xvooa98N0w31jzUYrXPX2xqObmFGHJ0tQ5u74H3mVh7wLouTseZyYIq39g8cNp1w==}
+    dev: false
+
+  /merge-options@3.0.4:
+    resolution: {integrity: sha512-2Sug1+knBjkaMsMgf1ctR1Ujx+Ayku4EdJN4Z+C2+JzoeF7A3OZ9KM2GY0CpQS51NR61LTurMJrRKPhSs3ZRTQ==}
+    engines: {node: '>=10'}
+    dependencies:
+      is-plain-obj: 2.1.0
     dev: false
 
   /merge-stream@2.0.0:

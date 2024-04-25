@@ -1,0 +1,9 @@
+{
+    "name": "@packages/services",
+    "version": "1.0.0",
+    "description": "Shared services",
+    "private": true,
+    "dependencies": {
+        "@packages/services": "workspace:^"
+    }
+}
