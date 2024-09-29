@@ -1,15 +1,27 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import { Link } from 'expo-router';
 import { Button } from '../components/Button';
+import { Row } from '../components/Row';
 
 export default function App() {
   return (
-    <View style={styles.container}>
+    <View className={'flex-1 justify-center items-center bg-white p-4'}>
       <StatusBar style="auto" />
-      <Button route='/signin'>
-        {'Iniciar sesion'}
-      </Button>
+      <Row>
+        <Button route='/signin'>
+          {'Iniciar sesion'}
+        </Button>
+      </Row>
+      <Row>
+        <Button route='/signup'>
+          {'Registrate'}
+        </Button>
+      </Row>
+      <Row>
+        <Button route='/board'>
+          {'Juego'}
+        </Button>
+      </Row>
     </View>
   );
 }
