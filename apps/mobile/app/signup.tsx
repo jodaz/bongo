@@ -16,7 +16,7 @@ const SignUp: React.FC = () => {
   };
 
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'white', padding: 16 }}>
+    <>
       <Text style={{ fontSize: 24, fontWeight: 'bold', marginBottom: 24 }}>
         Crea tu cuenta
       </Text>
@@ -64,7 +64,7 @@ const SignUp: React.FC = () => {
           Iniciar sesion
         </Button>
       </Row>
-    </View>
+    </>
   );
 };
 

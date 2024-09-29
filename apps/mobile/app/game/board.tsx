@@ -34,6 +34,20 @@ const BingoBoard: React.FC = () => {
   return (
     <View className="flex-1 justify-center items-center">
       <View className="flex-row flex-wrap w-9/10">
+        <View className="flex-row w-full">
+          {bingoLetters.map((letter, colIndex) => {
+            return (
+              <View
+                key={`${colIndex}`}
+                className={`m-1 p-4 rounded flex-1 ${'bg-yellow-500'}`} // Free space styling
+              >
+                <Text className="text-dark text-center font-extrabold text-2xl">
+                  {`${letter}`}
+                </Text>
+              </View>
+            );
+          })}
+        </View>
         {Array.from({ length: rows }).map((_, rowIndex) => (
           <View key={rowIndex} className="flex-row w-full">
             {bingoLetters.map((letter, colIndex) => {
@@ -43,10 +57,11 @@ const BingoBoard: React.FC = () => {
               return (
                 <TouchableOpacity
                   key={`${rowIndex}-${colIndex}`}
-                  className={`m-1 p-4 rounded flex-1 ${isFreeSpace ? 'bg-gray-300' : 'bg-blue-500'}`} // Free space styling
+                  className={`m-1 p-2 rounded flex-1 ${isFreeSpace ? 'bg-gray-300' : 'bg-blue-500'} h-12`} // Free space styling
+                  disabled={isFreeSpace}
                 >
-                  <Text className="text-white text-center">
-                    {isFreeSpace ? 'FREE' : `${letter} ${number}`}
+                  <Text className="text-white text-center text-xl font-extrabold" >
+                    {isFreeSpace ? '' : `${number}`}
                   </Text>
                 </TouchableOpacity>
               );

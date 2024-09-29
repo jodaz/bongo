@@ -14,7 +14,7 @@ const SignIn = () => {
   };
 
   return (
-    <View className={'flex-1 justify-center items-center bg-white p-4'}>
+    <>
       <Text className={'text-2xl font-bold mb-6'}>Iniciar sesion</Text>
       <Row spacing='small'>
         <TextInput
@@ -44,7 +44,7 @@ const SignIn = () => {
           Registrate
         </Button>
       </Row>
-    </View>
+    </>
   );
 };
 

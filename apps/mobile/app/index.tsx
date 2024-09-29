@@ -5,8 +5,7 @@ import { Row } from '../components/Row';
 
 export default function App() {
   return (
-    <View className={'flex-1 justify-center items-center bg-white p-4'}>
-      <StatusBar style="auto" />
+    <>
       <Row>
         <Button route='/signin'>
           {'Iniciar sesion'}
@@ -18,19 +17,10 @@ export default function App() {
         </Button>
       </Row>
       <Row>
-        <Button route='/board'>
+        <Button route='/game'>
           {'Juego'}
         </Button>
       </Row>
-    </View>
+    </>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

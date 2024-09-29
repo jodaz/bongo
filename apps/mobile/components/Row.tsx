@@ -4,14 +4,22 @@ import theme, { SpacingKeys } from '../theme'; // Adjust the import path as nece
 
 interface RowProps {
   children: ReactNode;
-  spacing?: SpacingKeys; // Use the SpacingKeys type for spacing prop
+  spacing?: SpacingKeys;
+  className?: string;
 }
 
-export const Row: React.FC<RowProps> = ({ children, spacing = 'medium' }) => {
+export const Row: React.FC<RowProps> = ({
+  children,
+  spacing = 'medium',
+  className
+}) => {
   const spacingValue = theme.spacing[spacing] || theme.spacing.medium; // Default to medium spacing
 
   return (
-    <View style={[styles.row, { marginBottom: spacingValue }]}>
+    <View
+      style={[styles.row, { marginBottom: spacingValue }]}
+      className={className}
+    >
       {children}
     </View>
   );
