@@ -9,6 +9,7 @@ interface ButtonProps {
   children: React.ReactNode;
   btnClassName?: string;
   classNameText?: string;
+  disabled?: boolean;
 }
 
 export const Button: React.FC<ButtonProps> = ({
@@ -16,7 +17,8 @@ export const Button: React.FC<ButtonProps> = ({
   route,
   children,
   btnClassName,
-  classNameText
+  classNameText,
+  disabled
 }) => {
   const router = useRouter();
 
@@ -33,6 +35,7 @@ export const Button: React.FC<ButtonProps> = ({
     <TouchableOpacity
       className={`bg-blue-500 rounded p-2 w-full ${btnClassName}`}
       onPress={handlePress}
+      disabled={disabled}
     >
       <Text className={`text-white text-center ${classNameText}`}>
         {children}
