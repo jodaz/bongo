@@ -21,6 +21,11 @@ export default function App() {
           {'Juego'}
         </Button>
       </Row>
+      <Row>
+        <Button route='/profile'>
+          {'Perfil'}
+        </Button>
+      </Row>
     </>
   );
 }

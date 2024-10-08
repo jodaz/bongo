@@ -60,7 +60,7 @@ const BingoBoard: React.FC = () => {
                   className={`m-1 p-2 rounded flex-1 ${isFreeSpace ? 'bg-gray-300' : 'bg-blue-500'} h-12`} // Free space styling
                   disabled={isFreeSpace}
                 >
-                  <Text className="text-white text-center text-xl font-extrabold" >
+                  <Text className="text-white text-center text-xl font-extrabold">
                     {isFreeSpace ? '' : `${number}`}
                   </Text>
                 </TouchableOpacity>
