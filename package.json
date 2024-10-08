@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev:mobile": "pnpm -F mobile run start",
-    "dev:server": "pnpm -F server run start"
+    "dev:mobile": "pnpm -F mobile run start"
   },
   "keywords": [],
   "author": "",
